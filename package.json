@@ -1,0 +1,89 @@
+{
+  "publisher": "froQ",
+  "name": "lig-theme",
+  "displayName": "LiG Theme",
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.21.0+sha512.da3337267e400fdd3d479a6c68079ac6db01d8ca4f67572083e722775a796788a7a9956613749e000fac20d424b594f7a791a5f4e2e13581c5ef947f26968a40",
+  "description": "LiG theme for VS Code",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Fro-Q/vscode-theme-LiG"
+  },
+  "bugs": {
+    "url": "https://github.com/Fro-Q/vscode-theme-oq/issues"
+  },
+  "keywords": [
+    "theme",
+    "lig",
+    "light",
+    "dark"
+  ],
+  "categories": [
+    "Themes"
+  ],
+  "exports": {
+    "./*": "./*"
+  },
+  "files": [
+    "LICENSE.md",
+    "themes/*"
+  ],
+  "engines": {
+    "vscode": "^1.107.0"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "LiG Light",
+        "uiTheme": "vs",
+        "path": "./themes/lig-light.json"
+      },
+      {
+        "label": "LiG Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lig-dark.json"
+      },
+      {
+        "label": "LiG Light Soft",
+        "uiTheme": "vs",
+        "path": "./themes/lig-light-soft.json"
+      },
+      {
+        "label": "LiG Dark Soft",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lig-dark-soft.json"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "tsx scripts/index.ts",
+    "dev": "tsx watch scripts/index.ts",
+    "vscode:prepublish": "npm run build",
+    "lint": "eslint .",
+    "prepublishOnly": "npm run build",
+    "release": "bumpp --all",
+    "package": "vsce package --no-dependencies"
+  },
+  "dependencies": {
+    "eslint-plugin-format": "^1.0.2"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^5.4.1",
+    "@antfu/utils": "^9.3.0",
+    "@types/color": "^4.2.0",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^24.9.1",
+    "@vscode/vsce": "^3.6.2",
+    "@xterm/xterm": "^5.5.0",
+    "bumpp": "^10.3.1",
+    "color": "^5.0.2",
+    "eslint": "^9.38.0",
+    "fs-extra": "^11.3.2",
+    "ovsx": "^0.10.6",
+    "tsup": "^8.5.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vsxpub": "^0.1.2"
+  },
+  "preview": true
+}
